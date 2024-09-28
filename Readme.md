@@ -43,6 +43,7 @@ Essas e outras libs e tecnologias usadas neste projeto são:
 │   │     ...
 ├─💎 app.rb             -> Entrypoint de aplicação
 │   ...
+├─📄 .env-semple       -> Exemplo de .env
 ├─📄 .gitignore
 ├─📄 Rakefile          ->  Automações para o ambiente
 ├─📄 Gemfile           ->  Definições para o projeto
@@ -100,9 +101,17 @@ $> bundle
 
 
 
+#### Rodar Code Formatter
 
+```
+$> rubocop
+```
 
+- Aplicar possiveis correções automaticas
 
+```
+$> rubocop -a
+```
 
 #### Adcionar novas dependencias
 
