@@ -1,0 +1,34 @@
+@startuml contextDiagram
+skinparam shadowing true
+skinparam packageBackgroundColor #DDDDFF
+skinparam actorBackgroundColor #FFDDDD
+skinparam actorBorderColor black
+skinparam rectangleBackgroundColor #CCFFFF
+skinparam rectangleBorderColor black
+skinparam ArrowColor #000080
+skinparam ArrowThickness 2
+skinparam roundcorner 20
+
+actor User as U
+
+package "Sistema" {
+    usecase "Criar Usuário" as createUser
+    usecase "Adicionar Depósito" as addDeposit
+    usecase "Ver Saldo" as getBalance
+    usecase "Sacar" as withdraw
+
+    usecase "Gerar Lucro Diário" as addProfit
+    usecase "Consultar Saldo Atualizado" as checkBalance
+    usecase "Permitir Saque" as allowWithdraw
+}
+
+U --> createUser
+createUser --> addDeposit
+createUser --> getBalance
+createUser --> withdraw
+
+addDeposit --> addProfit : "Calcula 33,33% ao dia"
+getBalance --> checkBalance
+withdraw --> allowWithdraw
+
+@enduml

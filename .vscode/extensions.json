@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "oderwat.indent-rainbow",
+        "tamasfe.even-better-toml",
+        "humao.rest-client",
+        "Gruntfuggly.todo-tree",
+        "rebornix.ruby",
+        "castwide.solargraph",
+        "Shopify.ruby-lsp",
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "Shopify.ruby-extensions-pack",
+        "ahmadawais.shades-of-purple",
+        "ciarant.vscode-structurizr",
+        "claudineyqr.plantuml-snippets"
+    ]
+}

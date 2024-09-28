@@ -1,0 +1,7 @@
+services:
+  ruby_project:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/workspace:cached

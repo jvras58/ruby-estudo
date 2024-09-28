@@ -1,0 +1,19 @@
+@startuml uml_diagram
+class User {
+    - name : varchar
+    + createUser()
+}
+
+class Transaction {
+    - type : enum { deposit, profit, withdraw }
+    - value : decimal
+    - User_id : int
+    + addDeposit()
+    + getBalance()
+    + addProfit()
+    + withdraw()
+}
+
+User "1" --o{ Transaction : "1"
+
+@enduml
