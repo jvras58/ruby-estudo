@@ -6,6 +6,7 @@ gem 'sinatra'
 
 gem 'byebug'
 gem 'dotenv'
+gem 'puma'
 gem 'rake'
 gem 'rubocop'
 gem 'rubocop-rails'
