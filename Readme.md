@@ -30,15 +30,14 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 │ │ │     ...
 │ ├─📁 adapters        -> Camada de interfaces (adapters)
 │ │ ├─📁 repositories  -> Acesso e manipulação de dados
-│ │ │         ├─💎 transcation_repository.rb   -> interage com a tabela de transaction.
-│ │ │         ├─💎 user_repository.rb   -> iinterage com a tabela de users.
+│ │ │         ├─💎 exemple_repository.rb   -> interage com a tabela de exemple.
 │ │ │     ...
 │ │ ├─📁 controllers   -> Controladores responsáveis por lidar com as requisições
-│ │ │         ├─💎 users_controllers.rb   -> Controlador responsável por lidar com users
+│ │ │         ├─💎 exemple_controllers.rb   -> Controlador responsável por lidar com exemples
 │ │ │     ...
 │ ├─📁 usecases        -> Casos de uso da aplicação
-│ │ ├─📁 users         -> Casos de uso relacionados a usuários
-│ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de usuários
+│ │ ├─📁 exemples         -> Casos de uso relacionados a exemples
+│ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de exemple
 │ │ │     ...
 │ ├─📁 db              -> Configurações do Banco de Dados
 ├─📁 lib               -> Utilitários da aplicação
