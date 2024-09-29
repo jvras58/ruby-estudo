@@ -13,5 +13,6 @@ gem 'rubocop-rails'
 gem 'rubocop-rspec'
 gem 'sinatra-activerecord'
 gem 'sqlite3'
+gem 'solargraph'
 
 # gem "rails"
