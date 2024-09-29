@@ -14,6 +14,6 @@
         "Shopify.ruby-extensions-pack",
         "ahmadawais.shades-of-purple",
         "ciarant.vscode-structurizr",
-        "claudineyqr.plantuml-snippets"
+        "claudineyqr.plantuml-snippets",
     ]
 }

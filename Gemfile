@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 
+gem 'byebug'
 gem 'dotenv'
 gem 'rake'
 gem 'rubocop'

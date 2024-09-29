@@ -1,122 +1,129 @@
-
-# Ruby - Estudos [clean architecture]
-
+# Ruby - Estudos [Clean Architecture]
 
 ## 📖 Sobre o Projeto
-O projeto consiste em uma aplicação - Api com ruby [Ver](docs/docs.md)
-
+Este projeto é uma API desenvolvida com Ruby, focada no estudo e implementação dos princípios da **Clean Architecture**. A documentação detalhada do que é a API pode ser encontrada [aqui](docs/docs.md).
 
 ## 🚀 Tecnologias e Ferramentas
+O projeto foi criado para aprimorar conhecimentos em Ruby, explorando suas capacidades e integração com outras ferramentas e bibliotecas.
 
-A aplicação foi desenvolvida para aprimorar estudos com ruby 
+### Stack do Projeto
+Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmica e forte, com gerenciamento automático de memória. O objetivo é demonstrar e aprender como estruturar um projeto seguindo os princípios da Clean Architecture.
 
-## Stack do Projeto
+#### Bibliotecas e Tecnologias Utilizadas:
+|  Tecnologia           | Versão    |
+|-----------------------|-----------|
+| **Runtime**           |           |
+| Ruby                  | v3.4.0    |
+| **Desenvolvimento**   |           |
+| Docker Engine         | vx.x.x    |
+| Bundler               | v2.6.0    |
 
-Este projeto é uma aplicação - Api simples que utiliza o Ruby, uma linguagem de programação interpretada multiparadigma, de tipagem dinâmica e forte, com gerenciamento de memória automático. O objetivo é demonstrar/Aprender as capacidades e a integração com a linguagem.
+### Organização do Projeto
 
-Essas e outras libs e tecnologias usadas neste projeto são:
-|  Lib      | Versão    |
-|-----------|-----------|
-| **Runtime**           |
-| Ruby    | v3.4.0   |
-| **Devtime**           |
-| Docker Engine                 | vx.x.x    |
-| budle                         | v2.6.0   |
-
-### Organização do projeto
 ```
 /
-├─📁 .devcontainer     ->  [Configurações do devcontainer]
-├─📁 docs              ->  [Artefatos para documentação do repo]
-├─📁 app               ->  [Implementação Principal]
-│ ├─📁 models               ->  [models da aplicação]
-│ │ │   ├─💎 user.rb         -> Modelo de Usuario
-│ │ │   ├─💎 transaction.rb         -> Modelo de Transação
+├─📁 .devcontainer     -> Configurações do ambiente de desenvolvimento (Devcontainer)
+├─📁 docs              -> Artefatos de documentação
+├─📁 app               -> Implementação principal da aplicação
+│ ├─📁 models          -> Modelos da aplicação
+│ │ ├─💎 exemple.rb       -> Modelo de exemple
 │ │ │     ...
-│ ├─📁 adapters               ->  [interface da camada]
-│ │ │   ├─📁 repositories         -> [interage com os dados]
-│ │ │         ├─💎 transcation_repository.rb   ->
-│ │ │         ├─💎 user_repository.rb   ->
+│ ├─📁 adapters        -> Camada de interfaces (adapters)
+│ │ ├─📁 repositories  -> Acesso e manipulação de dados
+│ │ │         ├─💎 transcation_repository.rb   -> interage com a tabela de transaction.
+│ │ │         ├─💎 user_repository.rb   -> iinterage com a tabela de users.
 │ │ │     ...
-├─📁 db             -> [Configurações do Banco de dados]
-├─📁 lib             -> [Utils da aplicação]
-│   │     ...
-├─💎 app.rb             -> Entrypoint de aplicação
-│   ...
-├─📄 .env-semple       -> Exemplo de .env
-├─📄 .gitignore
-├─📄 Rakefile          ->  Automações para o ambiente
-├─📄 Gemfile           ->  Definições para o projeto
-├─📄 README.md
-
+│ │ ├─📁 controllers   -> Controladores responsáveis por lidar com as requisições
+│ │ │         ├─💎 users_controllers.rb   -> Controlador responsável por lidar com users
+│ │ │     ...
+│ ├─📁 usecases        -> Casos de uso da aplicação
+│ │ ├─📁 users         -> Casos de uso relacionados a usuários
+│ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de usuários
+│ │ │     ...
+│ ├─📁 db              -> Configurações do Banco de Dados
+├─📁 lib               -> Utilitários da aplicação
+├─💎 app.rb            -> Ponto de entrada da aplicação
+├─📄 .env-sample       -> Exemplo de arquivo de variáveis de ambiente
+├─📄 .gitignore        -> Arquivos e pastas ignorados pelo Git
+├─📄 Rakefile          -> Automação de tarefas
+├─📄 Gemfile           -> Dependências do projeto
+├─📄 README.md         -> Este arquivo
 ```
 
-## Montando o ambiente
+## 🛠️ Configuração do Ambiente de Desenvolvimento
 
-Este repositório esta organizando em um devcontainer.
-E para instacia-lo no VSCODE é recomendado as seguintes configurações:
+Este repositório está configurado para rodar em um **Devcontainer** no VSCode. Siga os passos abaixo para instanciar o ambiente.
 
-#### Extenções recomendadas
+### Extensões Recomendadas
 
-- Name: Remote Development
-- Id: ms-vscode-remote.vscode-remote-extensionpack
-- Description: An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
-- Version: 0.25.0
-- Publisher: Microsoft
-- VSCode Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+- **Nome**: Remote Development
+- **Id**: `ms-vscode-remote.vscode-remote-extensionpack`
+- **Descrição**: Pacote de extensões que permite abrir pastas em containers, máquinas remotas ou WSL com todas as funcionalidades do VSCode.
+- **Versão**: 0.25.0
+- [VSCode Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-#### Docker Engine
+### Docker Engine
 
-É obrigatório ter o Docker Engine já instalado e cunfigurado. Para mais informações de como instalar o Docker Engine em seu SO, ver em:
+É necessário ter o Docker Engine instalado. Veja o guia de instalação para seu sistema operacional [aqui](https://docs.docker.com/engine/install/).
 
-- Instruções para instalação do Docker Engine: [Ver o link](https://docs.docker.com/engine/install/)
+### Procedimento para Instanciar o Projeto no VSCode
 
-#### Procedimento para instanciar o projeto no VSCODE
-1. Com o pack de extenções instalado,
-1. Realize o clone/fork deste repositório,
-1. Abra o diretorio deste repositorio no VSCODE como um projeto,
-1. Use o Comando _Dev Containers: Reopen in Container_ da paleta de comandos do VSCODE. _(F1, Ctrl+Shift+P)_.
+1. Instale o pacote de extensões recomendadas.
+2. Clone ou faça fork deste repositório.
+3. Abra o diretório do projeto no VSCode.
+4. Execute o comando _Dev Containers: Reopen in Container_ na paleta de comandos do VSCode (_F1, Ctrl+Shift+P_).
 
-Depois da compilação do container o VSCode abrirá o repositório em um ambiente encapsulado e executando diretamente de dentro do container como configurado nas definições do **/.devconainer**.
+Após a configuração do Devcontainer, o VSCode abrirá o projeto dentro de um ambiente isolado, conforme definido no diretório **/.devcontainer**.
 
-#### Procedimento para iniciar
+## 🚀 Iniciando a Aplicação
 
-1. instale as dependencias definidas no Gemfile
+1. Para iniciar o servidor (instalar as dependências e subir o ambiente):
+    ```sh
+    rake start
+    ```
 
-```
-$> bundle
-```
-- Pronto agora voce esta pronto para começar a usar!
+### Endpoints HTTP
 
+@name: create-users-userQuery  
+> Define o recebimento de parâmetros na URL.
 
-2. 
+@name: create-users  
+> O servidor ainda não está configurado para interpretar corretamente o corpo JSON da requisição com `Content-Type: application/json`.
 
+[Teste Aqui](routes.http)
 
+### 🔧 Comandos Úteis
 
+#### Rodar o Linter
 
+1. Verificar o código com Rubocop:
+    ```sh
+    rubocop
+    ```
 
+2. Aplicar correções automáticas:
+    ```sh
+    rubocop -a
+    ```
 
+#### Adicionar Novas Dependências
 
+1. Instale uma nova biblioteca:
+    ```sh
+    gem install <nome_da_lib>
+    ```
+2. Adicione a nova biblioteca ao `Gemfile`:
+    ```ruby
+    gem '<nome_da_lib>'
+    ```
 
+### 🗂️ Gerenciamento de Banco de Dados
 
-
-
-#### Rodar Code Formatter
-
-```
-$> rubocop
-```
-
-- Aplicar possiveis correções automaticas
-
-```
-$> rubocop -a
-```
-
-#### Adcionar novas dependencias
-
-- Adicionar uma nova lib para o runtime do projeto
-
-```
-$> gem install <<nome_da_lib>>
-```
+1. Crie uma nova migração (substitua `nome_migrations` pelo nome desejado):
+    ```sh
+    bundle exec rake db:create_migration NAME=nome_migrations
+    ```
+2. Execute a migração:
+    ```sh
+    bundle exec rake db:migrate
+    ```

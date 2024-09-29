@@ -1,0 +1,14 @@
+# Estamos usando o https://github.com/Huachao/vscode-restclient verificar exemplos que é possivel fazer com ele!
+
+# @name: create-users-userQuery
+POST http://127.0.0.1:4567/users?name=teste HTTP/1.1
+Content-Type: application/json
+
+
+# @name: create-users
+POST http://127.0.0.1:4567/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "teste2"
+}

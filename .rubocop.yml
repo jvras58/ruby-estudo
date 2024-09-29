@@ -103,6 +103,9 @@ RSpec/ContextWording:
 Rails/TransactionExitStatement:
   Enabled: false
 
+Rails/RakeEnvironment:
+  Enabled: false
+
 AllCops:
   NewCops: enable
   SuggestExtensions: false
