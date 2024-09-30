@@ -44,6 +44,8 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 ├─📁 lib               -> Utilitários da aplicação
 ├─📁 spec              -> Ambiente para testes
 │ │   ├─📁 app         -> Casos de uso relacionados a exemples
+│ │     ├─📁 model -> Casos de teste para o banco
+│ │     |      ├─💎 exemple_spec.rb          -> simula direto no banco
 │ │     ├─📁 usecases  -> Casos de uso dos testes
 │ │       ├─📁 exemple -> Casos de uso em testes
 │ │            ├─💎 exemple_create_spec.rb   -> simula Cria/salvar
