@@ -26,7 +26,7 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 ├─📁 docs              -> Artefatos de documentação
 ├─📁 app               -> Implementação principal da aplicação
 │ ├─📁 models          -> Modelos da aplicação
-│ │ ├─💎 exemple.rb       -> Modelo de exemple
+│ │ ├─💎 exemple.rb    -> Modelo de exemple
 │ │ │     ...
 │ ├─📁 adapters        -> Camada de interfaces (adapters)
 │ │ ├─📁 repositories  -> Acesso e manipulação de dados
@@ -35,14 +35,24 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 │ │ ├─📁 controllers   -> Controladores responsáveis por lidar com as requisições
 │ │ │         ├─💎 exemple_controllers.rb   -> Controlador responsável por lidar com exemples
 │ │ │     ...
-│ ├─📁 usecases        -> Casos de uso da aplicação
-│ │ ├─📁 exemples         -> Casos de uso relacionados a exemples
+│ ├─📁 usecases             -> Casos de uso da aplicação
+│ │ ├─📁 exemples           -> Casos de uso relacionados a exemples
 │ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de exemple
 │ │ │     ...
-│ ├─📁 db              -> Configurações do Banco de Dados
+├─📁 config            -> configura o suporte ativo para o projeto.
+├─📁 db                -> Configurações do Banco de Dados
 ├─📁 lib               -> Utilitários da aplicação
+├─📁 spec              -> Ambiente para testes
+│ │   ├─📁 app         -> Casos de uso relacionados a exemples
+│ │     ├─📁 usecases  -> Casos de uso dos testes
+│ │       ├─📁 exemple -> Casos de uso em testes
+│ │            ├─💎 exemple_create_spec.rb   -> simula Cria/salvar
+│ │    ...
+│ ├─💎 spec_helper.rb  -> Auxiliares de teste
+│ │    ...
 ├─💎 app.rb            -> Ponto de entrada da aplicação
 ├─📄 .env-sample       -> Exemplo de arquivo de variáveis de ambiente
+├─📄 .rspec            -> configurações e inicializações para testes
 ├─📄 .gitignore        -> Arquivos e pastas ignorados pelo Git
 ├─📄 Rakefile          -> Automação de tarefas
 ├─📄 Gemfile           -> Dependências do projeto
@@ -125,4 +135,14 @@ Após a configuração do Devcontainer, o VSCode abrirá o projeto dentro de um 
 2. Execute a migração:
     ```sh
     bundle exec rake db:migrate
+    ```
+
+### 🛠️ Testes com RSpec:
+
+1. Documentação de integração entre Sinatra/Ruby e RSpec:
+- [Configuração](https://shiroyasha.io/sinatra-app-with-rspec.html)
+
+2. Execute os testes:
+    ```sh
+    rake test
     ```

@@ -17,3 +17,7 @@ task :start do
   sh 'bundle'
   sh 'ruby app.rb'
 end
+
+task :test do
+  sh 'bundle exec rspec'
+end
