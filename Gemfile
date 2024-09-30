@@ -6,6 +6,7 @@ gem 'sinatra'
 
 gem 'byebug'
 gem 'dotenv'
+gem 'highline'
 gem 'puma'
 gem 'rackup'
 gem 'rake'

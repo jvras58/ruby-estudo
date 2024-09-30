@@ -125,13 +125,13 @@ Após a configuração do Devcontainer, o VSCode abrirá o projeto dentro de um 
 
 ### 🗂️ Gerenciamento de Banco de Dados
 
-1. Crie uma nova migração (substitua `nome_migrations` pelo nome desejado):
+1. Crie uma nova migração (substitua `exemple` pelo nome desejado):
     ```sh
-    bundle exec rake db:create_migration NAME=nome_migrations
+    rake db:create_migration Name=exemple
     ```
 2. Execute a migração:
     ```sh
-    bundle exec rake db:migrate
+    rake db:migrate
     ```
 
 ### 🛠️ Testes com RSpec:
