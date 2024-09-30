@@ -18,6 +18,10 @@ task :start do
   sh 'ruby app.rb'
 end
 
+task :lint do
+  sh 'rubocop -a'
+end
+
 task :test do
   sh 'bundle exec rspec'
 end

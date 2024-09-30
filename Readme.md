@@ -107,12 +107,7 @@ Após a configuração do Devcontainer, o VSCode abrirá o projeto dentro de um 
 
 1. Verificar o código com Rubocop:
     ```sh
-    rubocop
-    ```
-
-2. Aplicar correções automáticas:
-    ```sh
-    rubocop -a
+    rake lint
     ```
 
 #### Adicionar Novas Dependências
