@@ -10,7 +10,9 @@ namespace :db do
 
   desc 'Crie uma nova migração'
   task :create_migration do
-    migration_name = ask('Digite o nome da migração: ') { |q| q.default = 'nova_migracao' }
+    migration_name = ask('Digite o nome da migração: ') do |q|
+      q.default = 'nova_migracao'
+    end
     sh "bundle exec rake db:create_migration NAME=#{migration_name}"
   end
 

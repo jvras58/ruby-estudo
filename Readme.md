@@ -40,6 +40,7 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 │ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de exemple
 │ │ │     ...
 ├─📁 config            -> configura o suporte ativo para o projeto.
+│      ├─💎 environment.rb    -> configuração de todas as dependências e configurações
 ├─📁 db                -> Configurações do Banco de Dados
 ├─📁 lib               -> Utilitários da aplicação
 ├─📁 spec              -> Ambiente para testes
