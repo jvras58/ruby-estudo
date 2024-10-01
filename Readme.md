@@ -40,8 +40,8 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 │ │ │      ├─💎 create.rb   -> Cria/salvar utilizando o repositório de exemple
 │ │ │     ...
 ├─📁 config            -> configura o suporte ativo para o projeto.
-│      ├─💎 environment.rb    -> configuração de todas as dependências e configurações
-├─📁 db                -> Configurações do Banco de Dados
+│      ├─💎 environment.rb    -> configuração de todas as dependências e configurações do banco
+├─📁 db                -> Banco de Dados
 ├─📁 lib               -> Utilitários da aplicação
 ├─📁 spec              -> Ambiente para testes
 │ │   ├─📁 app         -> Casos de uso relacionados a exemples
@@ -51,7 +51,7 @@ Esta API simples utiliza Ruby, uma linguagem multiparadigma, de tipagem dinâmic
 │ │       ├─📁 exemple -> Casos de uso em testes
 │ │            ├─💎 exemple_create_spec.rb   -> simula Cria/salvar
 │ │    ...
-│ ├─💎 spec_helper.rb  -> Auxiliares de teste
+│ ├─💎 spec_helper.rb  -> Auxiliares dos testes
 │ │    ...
 ├─💎 app.rb            -> Ponto de entrada da aplicação
 ├─📄 .env-sample       -> Exemplo de arquivo de variáveis de ambiente
